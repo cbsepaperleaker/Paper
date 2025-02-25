@@ -7,52 +7,83 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f9f9f9;
+            text-align: center;
         }
         .container {
-            max-width: 600px;
+            max-width: 90%;
+            margin: 20px auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
         .header {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+        .description {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
         .contact {
-            margin: 10px 0;
-        }
-        .terms {
             font-size: 14px;
-            color: gray;
-            margin-top: 20px;
+            margin-bottom: 15px;
         }
-        .disclaimer {
-            font-size: 12px;
-            background: #f0f0f0;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-        .payment {
+        .price {
             font-size: 18px;
             font-weight: bold;
             color: green;
-            margin-top: 20px;
+            margin-bottom: 10px;
         }
         .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: purple;
+            display: block;
+            width: 90%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 12px;
+            background: #6200ea;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 16px;
+        }
+        .qr-container {
+            text-align: center;
             margin-top: 15px;
+        }
+        .qr-container img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: gray;
+            margin-top: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .header {
+                font-size: 20px;
+            }
+            .description {
+                font-size: 14px;
+            }
+            .contact {
+                font-size: 13px;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .qr-container img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -60,27 +91,28 @@
 
 <div class="container">
     <div class="header">CBSE PAPERS ALL SUBJECTS FOR CLASS 10 & 12</div>
-    <p><strong>Description:</strong> Score 70/70 in All Subjects</p>
+    <p class="description">Score 70/70 in All Subjects</p>
     
     <div class="contact">
-        <p><strong>Contact Team</strong></p>
-        <p>Email: Support@exam.in</p>
+        <p><b>Contact Team:</b></p>
+        <p>Email: support@exam.in</p>
         <p>Phone: 7676234567</p>
     </div>
 
-    <div class="terms">
-        <p><strong>Terms and conditions</strong></p>
-    </div>
-
-    <div class="disclaimer">
-        <p><strong>Disclaimer:</strong> CosmoFeed Technologies Pvt. Ltd. shall not be held liable for any content or materials published, sold, or distributed by content creators on our associated apps or websites.</p>
-    </div>
-
-    <div class="payment">
-        Amount Total: ₹500 <s>₹1000</s> (50% off)
+    <div class="price">
+        ₹500 <span style="text-decoration: line-through; color: red;">₹1000</span> (50% off)
     </div>
 
     <a href="payment.html" class="button">Make Payment</a>
+
+    <div class="qr-container">
+        <p>Scan the QR Code:</p>
+        <img src="QR.jpg" alt="QR Code">
+    </div>
+
+    <p class="disclaimer">
+        Cosmofeed Technologies Pvt. Ltd. shall not be held liable for any content or materials published, sold, or distributed by content creators on our associated apps or websites.
+    </p>
 </div>
 
 </body>
