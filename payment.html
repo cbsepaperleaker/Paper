@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .message a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Payment</div>
+    <p>Scan the QR code below to complete your payment:</p>
+    
+    <img src="QR.jpg" alt="QR Code" id="qr-code" width="200">
+
+    <br>
+    <a href="QR.jpg" download="QR.jpg" class="download-btn">Download QR Code</a>
+
+    <p class="message">
+        After payment, take a screenshot and send it to <a href="https://t.me/Helperofcbse">me</a>.
+    </p>
+
+    <br>
+    <a href="https://t.me/Helperofcbse" class="button">Confirm Payment</a>
+</div>
+
+</body>
+</html>
