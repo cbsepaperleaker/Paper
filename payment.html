@@ -1,75 +1,142 @@
-<!DOCTYPE html>
+Put your HTML text here<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
             text-align: center;
+            color: white;
         }
+
         .container {
-            max-width: 600px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
+            color: #333;
         }
+
         .header {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #6200ea;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: green;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
+
+        .qr-code {
+            width: 220px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
         }
-        .download-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: blue;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .message {
-            margin-top: 20px;
+
+        /* Buttons */
+        .button, .download-btn, .pay-now-btn {
+            display: block;
+            width: 90%;
+            max-width: 250px;
+            margin: 15px auto;
+            padding: 12px;
             font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
         }
+
+        .download-btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #0056b3, #007bff);
+            transform: scale(1.05);
+        }
+
+        .button {
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+            box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.3);
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #218838, #28a745);
+            transform: scale(1.05);
+        }
+
+        .pay-now-btn {
+            background: linear-gradient(135deg, #ff7b00, #ff4500);
+            color: white;
+            box-shadow: 0px 4px 10px rgba(255, 123, 0, 0.3);
+        }
+
+        .pay-now-btn:hover {
+            background: linear-gradient(135deg, #ff4500, #ff7b00);
+            transform: scale(1.05);
+        }
+
+        /* Message Text */
+        .message {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
         .message a {
-            color: blue;
+            color: #007bff;
             text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+            .header {
+                font-size: 20px;
+            }
+            .message {
+                font-size: 14px;
+            }
+            .button, .download-btn, .pay-now-btn {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">Payment</div>
+    <div class="header">💰 Secure Payment</div>
     <p>Scan the QR code below to complete your payment:</p>
     
-    <img src="QR.jpg" alt="QR Code" id="qr-code" width="200">
+    <img src="QR.jpg" alt="QR Code" class="qr-code">
 
-    <br>
-    <a href="QR.jpg" download="QR.jpg" class="download-btn">Download QR Code</a>
+    <a href="QR.jpg" download="QR.jpg" class="download-btn">⬇ Download QR Code</a>
+
+    <!-- UPI Payment Link -->
+    <a href="upi://pay?pa=7519021902@fam&pn=CBSE%20Papers&mc=1234&tid=TXNID&tr=ORDERID&tn=Payment%20for%20CBSE%20Papers&am=500&cu=INR" class="pay-now-btn">💳 Pay Now</a>
 
     <p class="message">
         After payment, take a screenshot and send it to <a href="https://t.me/Helperofcbse">me</a>.
     </p>
 
-    <br>
-    <a href="https://t.me/Helperofcbse" class="button">Confirm Payment</a>
+    <a href="https://t.me/Helperofcbse" class="button">✅ Confirm Payment</a>
 </div>
 
 </body>
